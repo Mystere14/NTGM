@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NTGM</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <div id="leftSection">
+        <div id="textSection">
+          <h2 id="text">Text</h2>
+          <textarea id="textArea" value="{$*2}. the name: {£} is define as the symbol \{£}"> 
+          </textarea>
+        </div>
+        <div id="differentStepSection">
+          <div id="differentStepButtonContainer">
+            <input id="differentStepButton" type="checkbox" />
+            <p>Decide which Numbers and Word’s list <br> progress at different step</p>
+          </div>
+          <input type="textarea" id="differentStepInput" value="$£" min="1" />
+        </div>
+        <div id="buttonSection">
+          <button id="clipboardButton">
+            <p id="clipboardText">Set in Clipboard</p>
+            <p id="ctrlText">Ctrl+C</p>
+          </button>
+          <button id="pasteButton">Paste</button>
+        </div>
+      </div>
+      <div id="rightSection">
+        <div id="numberSection">
+          <h2 id="textNumber">Numbers</h2>
+          <div id="numberContainer">
+            <div class="numberSubContainer1">
+              <div class="numberOptionsContainer">
+                <div class="startNumber">
+                  <label class="startNumber">Start:</label>
+                  <input class="startNumberInput" value="$=0" />
+                </div>
+                <div class="addNumber">
+                  <label class="addNumber">Add:</label>
+                  <input class="addNumberInput" value="1" />
+                </div>
+                <div class="endNumber">
+                  <label class="endNumber">End:</label>
+                  <input class="endNumberInput" value="10" />
+                </div>
+              </div>
+              <div id="addNumberButtonContainer">
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="wordListSection">
+          <h2 id="textWordList">Word's list</h2>
+          <div id="wordListContainer">
+            <div class="wordListSubContainer">
+              <h3 class="wordListTitle">First Word's List</h3>
+              <div class="wordListOptionsContainer">
+                <div class="wordList">
+                  <textarea class="wordListInput" value="£=['Christian','Emilien','Melchior','Poutre']"> 
+                  </textarea>
+                </div>
+              </div>
+              <div id="addNumberButtonContainer">
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+main
+{
+  display : flex;
+  flex-direction: row;
+}
+
+
+#textSection
+{
+  display : flex;
+  flex-direction: column;
+  
+  margin-right: 20px;
+  
+}
+
+#text
+{
+  margin-top: 10px;
+  margin-left: 3px;
+  margin-bottom: -5px;
+}
+
+#textArea
+{
+  width: 400px;
+  height: 200px;
+  overflow: auto; 
+  font-size: 22px;
+  margin: 10px;
+}
+
+#differentStepButtonContainer
+{
+  display: flex;
+  flex-direction: row;
+}
+
+#differentStepButton
+{
+  margin: 10px;
+  margin-top: 24px;
+  font-size: 18px;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  margin-left: 12px;
+
+  cursor: pointer;
+}
+
+#differentStepInput
+{
+  width:90px;
+  height:30px;
+  border: 1px solid black;
+  font-size: 18px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+#buttonSection
+{
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  justify-content: space-between;
+  margin-top: -30px;
+}
+
+#clipboardButton
+{
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+}
+
+#clipboardText
+{
+  margin-top: 0px;
+}
+
+#ctrlText
+{
+  margin-top: -18px;
+  font-size: 12px;
+}
+
+#pasteButton
+{
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+}
+
+#numberSection
+{
+  
+}
+
+#textNumber
+{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  margin-top: 13px;
+}
+
+.numberSubContainer
+{
+  border: 1px solid black;
+  margin-top: 0px;
+}
+
+.numberOptionsContainer
+{
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+}
+
+.startNumber
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.addNumber
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.endNumber
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  margin: 10px;
+}
+
+
+.startNumberInput
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  width: 60px;
+  height: 15px;
+  font-size: 18px;
+}
+
+.addNumberInput
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  width: 60px;
+  height: 15px;
+  font-size: 18px;
+}
+
+.endNumberInput
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  width: 60px;
+  height: 15px;
+  font-size: 18px;
+}
+
+#addNumberButtonContainer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 10px;
+  margin-right:10px;
+  margin-top:0px;
+}
+
+#wordListSection
+{
+
+}
+
+#textWordList
+{
+  margin-bottom: 3px;
+}
+
+#wordListContainer
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  border: 1px solid black;
+}
+
+.wordListTitle
+{
+  margin-top: 14px;
+  margin-left: 6px;
+  margin-bottom: -10px;
+  font-size: 16px;
+}
+
+.wordListInput
+{
+  width: 290px;
+  font-size: 18px;
+  margin: 10px;
+}
