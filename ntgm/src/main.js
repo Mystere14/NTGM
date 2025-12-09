@@ -1,7 +1,7 @@
 const { invoke } = window.__TAURI__.core;
 
 
-document.getElementById("addNumberButtonContainer").addEventListener("click", () =>
+document.getElementById("addNumberButtonContainer").addEventListener("click", async () =>
 {
   const container= document.getElementById("numberSubContainer")
   const subContainer= container.getElementsByClassName("numberOptionsContainer")
@@ -17,14 +17,34 @@ document.getElementById("addNumberButtonContainer").addEventListener("click", ()
   container.appendChild(newSubContainer)
 })
 
-document.getElementById("clipboardButton").addEventListener("click", () =>
+document.getElementById("clipboardButton").addEventListener("click", async () =>
 {
-  document.getElementById("numberSubContainer").classList.toggle("hidden")
+  const container = document.getElementById("numberSubContainer")
+
+  const startNumbers = container.getElementsByClassName("startNumberInput")
+  const addNumbers = container.getElementsByClassName("addNumberInput")
+  const endNumbers = container.getElementsByClassName("endNumberInput")
+
+  const data =[startNumbers,addNumbers,endNumbers]
+
+  await invoke("main", { data });
+
 })
 
-document.getElementById("pasteButton").addEventListener("click", () =>
+document.getElementById("pasteButton").addEventListener("click", async() =>
 {
+  const container = document.getElementById("numberSubContainer")
 
+  const startNumbers = container.getElementsByClassName("startNumberInput")
+  const addNumbers = container.getElementsByClassName("addNumberInput")
+  const endNumbers = container.getElementsByClassName("endNumberInput")
+  
+
+  const data =[startNumbers,addNumbers,endNumbers]
+  console.log(data)
+  await invoke("main", { data });
+
+  
 })
 
 
