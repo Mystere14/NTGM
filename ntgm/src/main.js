@@ -1,14 +1,11 @@
 const { invoke } = window.__TAURI__.core;
 
 
-const element= document.getElementById("addNumberButtonContainer").addEventListener("click", () =>
+document.getElementById("addNumberButtonContainer").addEventListener("click", () =>
 {
-  const container= document.getElementById("numberContainer")
-  console.log(container)
-  const subContainer= container.getElementsByClassName("numberSubContainer1")[0]
-  console.log(subContainer)
-  const newSubContainer = subContainer.cloneNode(true)
-  console.log(newSubContainer)
+  const container= document.getElementById("numberSubContainer")
+  const subContainer= container.getElementsByClassName("numberOptionsContainer")
+  const newSubContainer = subContainer[0].cloneNode(true)
 
   newSubContainer.getElementsByClassName("startNumberInput")[0].value="£=0"
 
@@ -20,8 +17,15 @@ const element= document.getElementById("addNumberButtonContainer").addEventListe
   container.appendChild(newSubContainer)
 })
 
-console.log(`element: ${element}`)
+document.getElementById("clipboardButton").addEventListener("click", () =>
+{
+  document.getElementById("numberSubContainer").classList.toggle("hidden")
+})
 
+document.getElementById("pasteButton").addEventListener("click", () =>
+{
+
+})
 
 
 /*async function greet() {

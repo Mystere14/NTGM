@@ -98,6 +98,12 @@ main
   
 }
 
+#numberContainer
+{
+  border: 1px solid black;
+}
+
+
 #textNumber
 {
   display: flex;
@@ -108,7 +114,6 @@ main
 
 .numberSubContainer
 {
-  border: 1px solid black;
   margin-top: 0px;
 }
 
