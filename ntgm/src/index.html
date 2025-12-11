@@ -13,15 +13,14 @@
       <div id="leftSection">
         <div id="textSection">
           <h2 id="text">Text</h2>
-          <textarea id="textArea" value="{$*2}. the name: {£} is define as the symbol \{£}"> 
-          </textarea>
+          <textarea id="textArea">{$*2}. the name: {£} is define as the symbol \{£}</textarea>
         </div>
         <div id="differentStepSection">
           <div id="differentStepButtonContainer">
             <input id="differentStepButton" type="checkbox" />
             <p>Decide which Numbers and Word’s list <br> progress at different step</p>
           </div>
-          <input type="textarea" id="differentStepInput" value="$£" min="1" />
+          <input type="textarea" id="differentStepInput" value="$£" />
         </div>
         <div id="buttonSection">
           <button id="clipboardButton">
@@ -52,24 +51,25 @@
               </div>
             </div>
             <div id="addNumberButtonContainer">
-              <button>+</button>
+              <button id=>+</button>
             </div>
           </div>
         </div>
         <div id="wordListSection">
           <h2 id="textWordList">Word's list</h2>
-          <div id="wordListContainer">
-            <div class="wordListSubContainer">
-              <h3 class="wordListTitle">First Word's List</h3>
-              <div class="wordListOptionsContainer">
-                <div class="wordList">
-                  <textarea class="wordListInput" value="£=['Christian','Emilien','Melchior','Poutre']"> 
-                  </textarea>
+          <div id="wordListContainers">
+            <div id="wordListContainer">
+              <div class="wordListSubContainer">
+                <h3 class="wordListTitle">First Word's List</h3>
+                <div id="wordListOptionsContainer">
+                  <div class="wordList">
+                    <textarea class="wordListInput">£=["Christian", "Emilien", "Melchior", "Poutre"]</textarea>
+                  </div>
                 </div>
               </div>
-              <div id="addNumberButtonContainer">
-                <button>+</button>
-              </div>
+            </div>
+            <div id="addWordListButtonContainer">
+              <button>+</button>
             </div>
           </div>
         </div>

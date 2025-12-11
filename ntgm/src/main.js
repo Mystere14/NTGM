@@ -17,34 +17,91 @@ document.getElementById("addNumberButtonContainer").addEventListener("click", as
   container.appendChild(newSubContainer)
 })
 
-document.getElementById("clipboardButton").addEventListener("click", async () =>
+document.getElementById("addWordListButtonContainer").addEventListener("click", async () =>
 {
+  const container= document.getElementById("wordListContainer")
+  console.log(container)
+  const subContainer= container.getElementsByClassName("wordListSubContainer")
+  console.log(subContainer)
+  const newSubContainer = subContainer[0].cloneNode(true)
+  
+  container.appendChild(newSubContainer)
+})
+
+document.getElementById("clipboardButton").addEventListener("click", async() =>
+{
+  const text= document.getElementById("textArea").value
+  
+
   const container = document.getElementById("numberSubContainer")
 
-  const startNumbers = container.getElementsByClassName("startNumberInput")
-  const addNumbers = container.getElementsByClassName("addNumberInput")
-  const endNumbers = container.getElementsByClassName("endNumberInput")
+  const blocks= container.getElementsByClassName("numberOptionsContainer")
 
-  const data =[startNumbers,addNumbers,endNumbers]
+  let startNumbers=[]
+  let addNumbers=[]
+  let endNumbers=[]
+  
+  for(let block of blocks)
+  {
+    startNumbers.push(block.getElementsByClassName("startNumberInput")[0].value)
+    addNumbers.push(block.getElementsByClassName("addNumberInput")[0].value)
+    endNumbers.push(block.getElementsByClassName("endNumberInput")[0].value)  // those line may not recover the right value
+  }
 
+  const filterLoop=document.getElementById("differentStepInput").value
+
+
+  const wordList=document.getElementById("wordListOptionsContainer").getElementsByClassName("wordList")
+
+  console.log(wordList)
+  let wordListArray=[]
+  for(let wordListValues of wordList)
+  {
+    wordListArray.push(wordListValues.getElementsByClassName("wordListInput")[0].value) // those line may not recover the right value
+  }
+
+
+  const data =[text,startNumbers,addNumbers,endNumbers,filterLoop,wordListArray]
+  console.log(data)
   await invoke("main", { data });
-
 })
 
 document.getElementById("pasteButton").addEventListener("click", async() =>
 {
+    const text= document.getElementById("textArea").value
+  
+
   const container = document.getElementById("numberSubContainer")
 
-  const startNumbers = container.getElementsByClassName("startNumberInput")
-  const addNumbers = container.getElementsByClassName("addNumberInput")
-  const endNumbers = container.getElementsByClassName("endNumberInput")
-  
+  const blocks= container.getElementsByClassName("numberOptionsContainer")
 
-  const data =[startNumbers,addNumbers,endNumbers]
+  let startNumbers=[]
+  let addNumbers=[]
+  let endNumbers=[]
+  
+  for(let block of blocks)
+  {
+    startNumbers.push(block.getElementsByClassName("startNumberInput")[0].value)
+    addNumbers.push(block.getElementsByClassName("addNumberInput")[0].value)
+    endNumbers.push(block.getElementsByClassName("endNumberInput")[0].value)  // those line may not recover the right value
+  }
+
+  const filterLoop=document.getElementById("differentStepInput").value
+
+
+  const wordList=document.getElementById("wordListOptionsContainer").getElementsByClassName("wordList")
+
+  console.log(wordList)
+  let wordListArray=[]
+  for(let wordListValues of wordList)
+  {
+    wordListArray.push(wordListValues.getElementsByClassName("wordListInput")[0].value) // those line may not recover the right value
+  }
+
+
+  const data =[text,startNumbers,addNumbers,endNumbers,filterLoop,wordListArray]
   console.log(data)
   await invoke("main", { data });
-
-  
 })
 
 

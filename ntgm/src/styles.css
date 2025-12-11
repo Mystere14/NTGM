@@ -26,7 +26,7 @@ main
   width: 400px;
   height: 200px;
   overflow: auto; 
-  font-size: 22px;
+  font-size: 18px;
   margin: 10px;
 }
 
@@ -205,12 +205,18 @@ main
   margin-bottom: 3px;
 }
 
+#wordListContainers
+{
+  border: 1px solid black;
+  
+}
+
 #wordListContainer
 {
   display: flex;
   flex-direction: column;
   margin-top: 0px;
-  border: 1px solid black;
+  
 }
 
 .wordListTitle
@@ -224,6 +230,17 @@ main
 .wordListInput
 {
   width: 290px;
-  font-size: 18px;
+  height: 80px;
+  font-size: 16px;
   margin: 10px;
+}
+
+#addWordListButtonContainer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 10px;
+  margin-right:10px;
+  margin-top:0px;
 }
