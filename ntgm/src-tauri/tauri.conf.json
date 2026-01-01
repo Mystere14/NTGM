@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "identifier": "com.nican.ntgm",
   "build": {
-    "frontendDist": "../src"
+  "beforeBuildCommand": "npm run build --prefix src",
+  "beforeDevCommand": "npm run dev --prefix src",
+  "devUrl": "http://localhost:5173",
+  "frontendDist": "../src/dist"
   },
   "app": {
     "withGlobalTauri": true,

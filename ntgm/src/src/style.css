@@ -73,6 +73,7 @@ main
   width: 200px;
   height: 40px;
   font-size: 18px;
+  margin-left: 70px;
 }
 
 #clipboardText
@@ -185,13 +186,35 @@ main
   font-size: 18px;
 }
 
+#containerButtonsNumber
+{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+
+#removeNumberButtonContainer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 0px;
+}
+
+#removeNumberButton
+{
+  width:28px;
+  height: 25px
+}
+
 #addNumberButtonContainer
 {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin: 10px;
-  margin-right:10px;
+  margin-left:235px;
+  margin-right: 10px;
   margin-top:0px;
 }
 
@@ -235,12 +258,36 @@ main
   margin: 10px;
 }
 
+#containerButtonsWordList
+{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+
+#removeWordListButtonContainer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 0px;
+}
+
+#removeWordListButton
+{
+  width:28px;
+  height: 25px
+}
+
+
 #addWordListButtonContainer
 {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  margin: 10px;
-  margin-right:10px;
+  margin-left:235px;
+  margin-right: 10px;
   margin-top:0px;
 }
+
