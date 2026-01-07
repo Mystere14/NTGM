@@ -15,7 +15,7 @@ pub fn check_init_symbol_is_not_operation_symbol(current_symbol : Option<char>)
 {
     if let Some(current_symbol) = current_symbol 
     {
-        if current_symbol=='*' || current_symbol=='+' || current_symbol=='/' || current_symbol=='-'|| current_symbol=='%' || current_symbol=='^' || current_symbol=='.'
+        if current_symbol=='*' || current_symbol=='+' || current_symbol=='/' || current_symbol=='-'|| current_symbol=='%' || current_symbol=='^' || current_symbol=='.' || current_symbol.is_ascii_digit()
         {
             panic!("Definition symbol cannot be an operation symbol such as +, -, *, /, ., ^, %");
         }
