@@ -1,0 +1,15 @@
+/target
+/src-tauri/target
+/node_modules
+/ntgm/src-tauri/node_modules
+/dist
+/ntgm/src-tauri/dist
+/.env
+/ntgm/src-tauri/.env
+/.env.local
+/ntgm/src-tauri/.env.local
+/.env.development.local
+/ntgm/src-tauri/.env.development.local
+/.env.test.local
+/ntgm/src-tauri/.env.test.local
+/.env.production.local      
